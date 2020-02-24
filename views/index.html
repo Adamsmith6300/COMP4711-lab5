@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Artist App
+    </title>
+    <script src="./js/home.js" defer></script>
+    <link href="https://fonts.googleapis.com/css?family=Nunito|Roboto&display=swap" rel="stylesheet">
+    <link href="./css/home.css" rel="stylesheet">
+</head>
+<body>
+    <div id="artistSearch">
+        <h1>Artist Directory</h1>
+        <input id="searchArtist" placeholder="Type to search..." type="text" />
+        <button id="searchSubmit" class="btn">Search</button>
+        <button id="addArtist" class="btn">Add Artist</button>
+    </div>
+    <form class="addArtistForm" action="index.html" method="POST">
+          <input type="text" maxLength="40" placeholder="Artist Name" name="name" required>
+          <input type="text" maxLength="40" placeholder="About Artist" name="desc" required>
+          <input type="text" placeholder="Image url" name="url" required>
+          <button type="button" class="btn">Add</button>
+    </form>
+    <div id="artistList">
+         
+    </div>
+
+
+</body>
+</html>
