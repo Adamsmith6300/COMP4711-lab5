@@ -12,6 +12,7 @@ document.querySelector(".addArtistForm .btn").addEventListener("click", function
     postData('/artists/add', object)
         .then((data) => {
         addArtist(object);
+        artists.push(object);
     });
     
     form.reset();
@@ -43,7 +44,7 @@ async function delArtist(e) {
     artist.parentNode.removeChild(artist);
     let artistDesc = artist.getElementsByClassName("artistDesc")[0].innerText;
     
-    if(artists != null){
+    
         for(let i = 0 ; i < artists.length; ++i){
             if(artists[i].desc == artistDesc){
                 id = artists[i].id;
@@ -66,7 +67,7 @@ async function delArtist(e) {
                 return response;
             }
         }
-    }
+    
 }
 
 //get all artists from server
