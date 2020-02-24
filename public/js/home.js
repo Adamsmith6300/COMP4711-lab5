@@ -43,7 +43,7 @@ async function delArtist(e) {
     artist.parentNode.removeChild(artist);
     let artistDesc = artist.getElementsByClassName("artistDesc")[0].innerText;
     
-    if(artists != null && artists.length > 0){
+    if(artists != null){
         for(let i = 0 ; i < artists.length; ++i){
             if(artists[i].desc == artistDesc){
                 id = artists[i].id;
